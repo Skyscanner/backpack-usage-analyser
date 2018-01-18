@@ -1,0 +1,17 @@
+language: node_js
+env:
+  global:
+    - NPM_CONFIG_LOGLEVEL=warn
+install:
+  - npm install
+script:
+  - npm test
+cache:
+  directories:
+    - node_modules
+# This causes builds for merges and direct pushes to master.
+# Other branches are pull requests and build are triggered via the
+# pull request hook
+branches:
+  only:
+    - master
