@@ -8,5 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 _Nothing yet..._
 
+## 2018-01-18 - 0.0.2
+- Fixed issues with installing the package
+
 ## 2018-01-18 - 0.0.1
 - Initial release with basic react-native and ios platform support
