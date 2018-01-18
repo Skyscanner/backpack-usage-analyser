@@ -4,7 +4,7 @@
 
 ## Usage
 
-```
+```sh
 npx backpack-usage-analyser [options] <platform>
 
   Options:
@@ -14,7 +14,8 @@ npx backpack-usage-analyser [options] <platform>
 ```
 
 E.g:
-```
+
+```sh
 npx backpack-usage-analyser react-native
 
 Number of files analysed: 397
