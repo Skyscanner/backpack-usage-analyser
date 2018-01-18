@@ -28,7 +28,7 @@ const config = require('./config');
 const availablePlatforms = Object.keys(config);
 
 module.exports = async (platform) => {
-  if (availablePlatforms.indexOf(platform) === -1) {
+  if (!availablePlatforms.includes(platform)) {
     console.log();
     console.error(`😱  Unrecognised platform, please specify one of: ${availablePlatforms.join(', ')}`);
     process.exit(1);
@@ -50,5 +50,5 @@ module.exports = async (platform) => {
   console.log();
   console.log(`Number of files analysed: ${paths.length}`);
   console.log(`Number of Backpack usages: ${numberOfUsages}`);
-  console.log(`Usage: ${percentage.toFixed(1)}%`);
+  console.log(`Usage (%): ${percentage.toFixed(2)}`);
 };
