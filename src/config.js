@@ -34,4 +34,12 @@ module.exports = {
       /from 'bpk-/g,
     ],
   },
+  android: {
+    globs: [
+      '**/*.{java,kt,xml}',
+    ],
+    patterns: [
+      /bpk/g,
+    ],
+  },
 };
