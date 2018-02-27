@@ -1,6 +1,6 @@
 {
   "name": "backpack-usage-analyser",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A tool to analyse the usage of Backpack resources in codebases.",
   "main": "index.js",
   "bin": {
