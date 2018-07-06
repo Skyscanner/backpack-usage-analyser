@@ -1,4 +1,4 @@
-# backpack-usage-analyser [![Build Status](https://travis-ci.org/Skyscanner/backpack-usage-analyser.svg?branch=master)](https://travis-ci.org/Skyscanner/backpack-usage-analyser)
+# backpack-usage-analyser [![Build Status](https://travis-ci.org/Skyscanner/backpack-usage-analyser.svg?branch=master)](https://travis-ci.org/Skyscanner/backpack-usage-analyser) [![Greenkeeper badge](https://badges.greenkeeper.io/Skyscanner/backpack-usage-analyser.svg)](https://greenkeeper.io/)
 
 > A tool to analyse the usage of Backpack resources in codebases.
 
