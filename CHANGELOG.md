@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 _Nothing yet..._
 
+## 2018-08-16 - 0.1.1
+### Fixed
+- Updated dependencies
+
 ## 2018-02-27 - 0.1.0
 ### Added
 - Android native support
