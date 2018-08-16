@@ -7,7 +7,10 @@
     "backpack-usage-analyser": "./cli.js"
   },
   "scripts": {
-    "test": "eslint ."
+    "lint:js": "eslint . --ext js,jsx",
+    "lint:js:fix": "eslint . --ext js,jsx --fix",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\"",
+    "test": "npm run lint:js"
   },
   "repository": {
     "type": "git",
@@ -29,13 +32,6 @@
     "globby": "^8.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.5",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-skyscanner": "^4.0.0-beta.4",
-    "eslint-plugin-backpack": "^0.1.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0"
+    "eslint-config-skyscanner-with-prettier": "^0.2.2"
   }
 }
