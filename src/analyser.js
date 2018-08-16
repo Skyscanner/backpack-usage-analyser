@@ -30,7 +30,11 @@ const availablePlatforms = Object.keys(config);
 module.exports = async (platform) => {
   if (!availablePlatforms.includes(platform)) {
     console.log();
-    console.error(`😱  Unrecognised platform, please specify one of: ${availablePlatforms.join(', ')}`);
+    console.error(
+      `😱  Unrecognised platform, please specify one of: ${availablePlatforms.join(
+        ', ',
+      )}`,
+    );
     process.exit(1);
   }
 
@@ -38,13 +42,18 @@ module.exports = async (platform) => {
 
   const paths = await globby(globs, { gitignore: true });
 
-  const usages = await Promise.all(paths.map(async (filePath) => {
-    const fileContents = await readFile(path.resolve(filePath));
+  const usages = await Promise.all(
+    paths.map(async (filePath) => {
+      const fileContents = await readFile(path.resolve(filePath));
 
-    return patterns.some(pattern => pattern.test(fileContents));
-  }));
+      return patterns.some(pattern => pattern.test(fileContents));
+    }),
+  );
 
-  const numberOfUsages = usages.reduce((count, isUsed) => (isUsed ? count + 1 : count), 0);
+  const numberOfUsages = usages.reduce(
+    (count, isUsed) => (isUsed ? count + 1 : count),
+    0,
+  );
   const percentage = (100 / paths.length) * numberOfUsages;
 
   console.log();

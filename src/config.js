@@ -18,28 +18,15 @@
 
 module.exports = {
   ios: {
-    globs: [
-      '**/*.{m,h}',
-    ],
-    patterns: [
-      /#import <Backpack\/[a-zA-Z]+(\/[a-zA-Z]+)?\.h>/g,
-    ],
+    globs: ['**/*.{m,h}'],
+    patterns: [/#import <Backpack\/[a-zA-Z]+(\/[a-zA-Z]+)?\.h>/g],
   },
   'react-native': {
-    globs: [
-      '**/*.{js,jsx}',
-    ],
-    patterns: [
-      /from 'react-native-bpk-/g,
-      /from 'bpk-/g,
-    ],
+    globs: ['**/*.{js,jsx}'],
+    patterns: [/from 'react-native-bpk-/g, /from 'bpk-/g],
   },
   android: {
-    globs: [
-      '**/*.{java,kt,xml}',
-    ],
-    patterns: [
-      /bpk/g,
-    ],
+    globs: ['**/*.{java,kt,xml}'],
+    patterns: [/bpk/g],
   },
 };
