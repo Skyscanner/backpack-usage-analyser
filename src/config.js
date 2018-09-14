@@ -18,8 +18,18 @@
 
 module.exports = {
   ios: {
-    globs: ['**/*.{m,h}'],
-    patterns: [/#import <Backpack\/[a-zA-Z]+(\/[a-zA-Z]+)?\.h>/g],
+    globs: ['**/{Modules,App}/**/*{View,Cell}*.{m,swift}', '!**/{Tests,UITests}/**'],
+    patterns: [
+      /BPKColor/gi,
+      /BPKFont/gi,
+      /BPKSpacing/gi,
+      /BPKBorderRadius/gi,
+      /BPKShadow/gi,
+      /BPKGradient/gi,
+      /BPKBadge/gi,
+      /BPKLabel/gi,
+      /BPKPanel/gi,
+    ],
   },
   'react-native': {
     globs: ['**/*.{js,jsx}'],

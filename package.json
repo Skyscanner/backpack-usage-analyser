@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "A tool to analyse the usage of Backpack resources in codebases.",
   "main": "index.js",
+  "engines": {
+    "node": "^8.12.0",
+    "npm": "^6.4.1"
+  },
   "bin": {
     "backpack-usage-analyser": "./cli.js"
   },
@@ -10,6 +14,7 @@
     "lint:js": "eslint . --ext js,jsx",
     "lint:js:fix": "eslint . --ext js,jsx --fix",
     "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\"",
+    "pretest": "npx ensure-node-env",
     "test": "npm run lint:js"
   },
   "repository": {

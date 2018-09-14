@@ -27,7 +27,7 @@ const config = require('./config');
 
 const availablePlatforms = Object.keys(config);
 
-module.exports = async (platform) => {
+module.exports = async ({ platform, verbose }) => {
   if (!availablePlatforms.includes(platform)) {
     console.log();
     console.error(
@@ -60,4 +60,10 @@ module.exports = async (platform) => {
   console.log(`Number of files analysed: ${paths.length}`);
   console.log(`Number of Backpack usages: ${numberOfUsages}`);
   console.log(`Usage (%): ${percentage.toFixed(2)}`);
+
+  if (verbose) {
+    console.log();
+    console.log('File analysed:');
+    paths.map(file => console.log(`  ${file}`));
+  }
 };

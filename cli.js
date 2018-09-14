@@ -32,6 +32,7 @@ program
   .action((platformArg) => {
     platform = platformArg;
   })
+  .option('--verbose', 'output globbed file paths')
   .parse(process.argv);
 
-(async () => analyser(platform))();
+(async () => analyser({ platform, verbose: program.verbose }))();
