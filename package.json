@@ -32,6 +32,6 @@
     "globby": "^8.0.1"
   },
   "devDependencies": {
-    "eslint-config-skyscanner-with-prettier": "^0.4.0"
+    "eslint-config-skyscanner-with-prettier": "^0.5.0"
   }
 }
